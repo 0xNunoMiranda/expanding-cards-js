@@ -1,0 +1,78 @@
+*{
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Poppins',serif;
+
+}
+
+body{
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    margin:auto;
+    display: flex;
+    width: 90vw;
+    height: 70%;
+}
+header h1{
+    padding-inline: 24px;
+    font-size: 2rem;
+}
+
+.panel{
+    padding-inline: 12px;
+    cursor: pointer;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.7s ease-in;
+    height: 100%;
+}
+img{
+    border-radius: 24px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.panel.active{
+    flex: 5;
+}
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+  }
+.panel h3 {
+    font-family: 'Poppins', serif;
+    font-size: 1.2rem;
+    position: absolute;     /* Para que possamos controlar a posição na tela */
+    bottom: 50px;           /* Distância do canto inferior */
+    left: 50px;
+    margin: 0;              /* Remove margens padrão */
+    color: #fff;            /* Cor do texto para contraste */
+    font-size: 1.5rem;      /* Exemplo de tamanho de fonte */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);  /* Sombra p/ melhor leitura */
+    opacity: 0;
+}
+
+footer{
+    padding: 24px;
+    font-weight: 800;
+}
+
+
+@media(max-width:480px) {
+    .container{
+        width: 100vw;
+    }
+    .panel{
+        padding-block: 2px;
+        padding-inline: 1.5px;
+        flex: 0.5;
+    }
+}
